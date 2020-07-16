@@ -1,0 +1,139 @@
+
+<!doctype html>
+<html  class="x-admin-sm">
+<head>
+    <title>登录</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <link rel="stylesheet" href="css/spig.css">
+</head>
+<body class="login-bg">
+
+<div class="container demo-1">
+    <div class="content">
+        <div id="large-header" class="large-header">
+            <canvas id="demo-canvas"></canvas>
+            <div class="logo_box">
+                <h3>欢迎登录</h3>
+                <form class="layui-form" id="form-login">
+                    <div class="input_outer">
+                        <span class="u_user"></span>
+                        <input name="account" id="account" class="text" autocomplete="off" style="color: #FFFFFF !important" lay-verify="account" oninput="value=value.replace(/[^0-9a-zA-Z_]/g,'')" maxlength="16" type="text" placeholder="请输入账户">
+                    </div>
+                    <div class="input_outer">
+                        <span class="us_uer"></span>
+                        <input name="password" id="password" class="text" autocomplete="off" style="color: #FFFFFF !important; position:absolute; z-index:100;"oninput="value=value.replace(/[^0-9a-zA-Z_]/g,'')"lay-verify="password" maxlength="16"value="" type="password" placeholder="请输入密码">
+                    </div>
+                    <input value="登录" id="btn-login" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" lay-filter="login" lay-submit=""  style="height:50px;width: 330px" type="button">
+                    <div style="margin: 30px;color: #00FFFF">还没有账号?<a id="reg" href="./reg.html" style="color: #01AAED">去注册</a></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="spig" class="spig" style="z-index: 9999">
+    <div id="message">……</div>
+    <div id="mumu" class="mumu"></div>
+</div>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script src="js/spig.js"></script>
+<script src="js/TweenLite.min.js"></script>
+<script src="js/EasePack.min.js"></script>
+<script src="js/rAF.js"></script>
+<script src="js/login.js"></script>
+    <script src="layui/layui.js" charset="utf-8"></script>
+    <!--[if lt IE 9]>
+    <script src="./js/html5.min.js"></script>
+    <script src="./js/respond.min.js"></script>
+    <![endif]-->
+    <script>
+        var isindex=false;
+        var title="登录页面";
+        var visitor="这位亲";
+        layui.use(['form', 'jquery', 'element', 'laydate', 'layer'], function () {
+
+            var $ = layui.jquery
+                , element = layui.element
+                , laydate = layui.laydate
+                , form = layui.form
+                , layer = layui.layer;
+        });
+        document.onkeydown=function(event){
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            if (e.keyCode==13){
+                $("#btn-login").click();
+            }
+        };
+
+        if(top.location.href.indexOf("login.html")==-1){
+            top.location.href = "/login.html";
+        }
+
+        layui.use(['form', 'layer', 'jquery'],
+            function () {
+                $ = layui.jquery;
+                var form = layui.form,
+                    layer = layui.layer;
+
+                //自定义验证规则
+                form.verify({
+                    account: function (value) {
+                        if (value.length < 5) {
+                            return '账户名不少于5位';
+                        }
+                    },
+                    password: function (value) {
+                        if (value.length < 5) {
+                            return '密码不少于5位';
+                        }
+                    }
+                });
+
+                //监听提交
+                form.on('submit(login)',
+                    function (data) {
+                    layer.msg("敬请期待!")
+                    /*var str = data.field
+                    $.ajax({
+                        "url":"user/login",
+                        "type":"post",
+                        "contentType":"application/json;charset=utf-8",
+                        "data":JSON.stringify(str),
+                        "dataType":"json",
+                        "success":function(obj){
+                            if(obj.success==2000){
+                                location.href="user/index";
+                            }else{
+                                layer.msg(obj.msg);
+                            }
+                        }
+                    })*/
+                });
+            })
+        //鼠标在某些元素上方时
+        jQuery(document).ready(function ($) {
+            $('#account').mouseover(function () {//标题被点击时
+                showMessage('您的账户名不少于5位哦');
+                moveTo("account")
+            });
+            $('#password').mouseover(function () {
+                showMessage('密码也不少于5位呢');
+                moveTo("password")
+            });
+            $('#btn-login').mouseover(function () {//标题被点击时
+                showMessage('点击登录');
+                moveTo("btn-login")
+            });
+            $('#reg').mouseover(function () {
+                showMessage('点击这里就可以注册账号啦!');
+                moveTo("reg")
+            });
+        });
+    </script>
+    <!-- 底部结束 -->
+</body>
+</html>

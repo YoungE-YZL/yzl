@@ -1,0 +1,37 @@
+.spig {
+    display:block;
+    width:100px;
+    height:155px;
+    position:absolute;
+    bottom: 300px;
+    left:180px;
+    z-index:9999;
+}
+#message{
+    color :#191919;
+    border: 1px solid #eeeeee;
+    background:#ddd;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    min-height:1em;
+    padding:5px;
+    top:-55px;
+    position:absolute;
+    text-align:center;
+    width:auto !important;
+    z-index:10000;
+    -moz-box-shadow:0 0 15px #eeeeee;
+    -webkit-box-shadow:0 0 15px #eeeeee;
+    box-shadow:0 0 15px #eeeeee;
+    outline:none;
+}
+#message a{
+    color: #01AAED;
+}
+.mumu{
+    width:100px;
+    height:155px;
+    cursor: move;
+    background:url(/img/spig.png) no-repeat;
+}

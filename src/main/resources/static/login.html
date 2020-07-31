@@ -82,14 +82,14 @@
                 //自定义验证规则
                 form.verify({
                     account: function (value) {
-                        if (value.length < 5) {
-                            return '账户名不少于5位';
-                        }
+                        /*if (value.length < 6) {
+                            return '账户名不少于6位';
+                        }*/
                     },
                     password: function (value) {
-                        if (value.length < 5) {
-                            return '密码不少于5位';
-                        }
+                        /*if (value.length < 6) {
+                            return '密码不少于6位';
+                        }*/
                     }
                 });
 
@@ -117,11 +117,11 @@
         //鼠标在某些元素上方时
         jQuery(document).ready(function ($) {
             $('#account').mouseover(function () {//标题被点击时
-                showMessage('您的账户名不少于5位哦');
+                showMessage('您的账户名不少于6位哦');
                 moveTo("account")
             });
             $('#password').mouseover(function () {
-                showMessage('密码也不少于5位呢');
+                showMessage('密码也不少于6位呢');
                 moveTo("password")
             });
             $('#btn-login').mouseover(function () {//标题被点击时
@@ -133,6 +133,15 @@
                 moveTo("reg")
             });
         });
+        console.log(" __       ______   __    __  ____    ____      \n" +
+            "/\\ \\     /\\  _  \\ /\\ \\  /\\ \\/\\  _`\\ /\\  _`\\    \n" +
+            "\\ \\ \\    \\ \\ \\L\\ \\\\ `\\`\\\\/'/\\ \\ \\L\\ \\ \\ \\/\\_\\  \n" +
+            " \\ \\ \\  __\\ \\  __ \\`\\ `\\ /'  \\ \\ ,__/\\ \\ \\/_/_ \n" +
+            "  \\ \\ \\L\\ \\\\ \\ \\/\\ \\ `\\ \\ \\   \\ \\ \\/  \\ \\ \\L\\ \\\n" +
+            "   \\ \\____/ \\ \\_\\ \\_\\  \\ \\_\\   \\ \\_\\   \\ \\____/\n" +
+            "    \\/___/   \\/_/\\/_/   \\/_/    \\/_/    \\/___/ \n" +
+            "    :: laypc.cn ::                (v0.0.1.TEST)")
+
     </script>
     <!-- 底部结束 -->
 </body>

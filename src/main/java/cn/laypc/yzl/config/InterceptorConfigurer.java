@@ -26,6 +26,7 @@ public class InterceptorConfigurer implements WebMvcConfigurer{
 				registry.addInterceptor(loginInterceptor);
 		List<String> patterns = new ArrayList<>();
 
+		patterns.add("/");
 		patterns.add("/css/**");
 		patterns.add("/img/**");
 		patterns.add("/js/**");
@@ -33,6 +34,8 @@ public class InterceptorConfigurer implements WebMvcConfigurer{
 
 		patterns.add("/login.html");
 		patterns.add("/reg.html");
+		patterns.add("/index.html");
+
 		addInterceptor.addPathPatterns("/**").excludePathPatterns(patterns);
 	}
 

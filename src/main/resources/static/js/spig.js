@@ -2,8 +2,8 @@
 jQuery(document).ready(function ($) {
     $("#spig").mousedown(function (e) {
         if(e.which==3){
-            showMessage('秘密通道:<br /><a href="http://laypc.cn" title="敬请期待!">敬请期待!</a><br/>' +
-                '<a onclick="removeBaiJiang()">隐藏浮动小人</a>',10000);
+           /* showMessage('秘密通道:<br /><a href="http://laypc.cn" title="敬请期待!">敬请期待!</a><br/>' +
+                '<a onclick="removeBaiJiang()">隐藏浮动小人</a>',10000);*/
         }
     });
     $("#spig").bind("contextmenu", function(e) {
@@ -99,11 +99,11 @@ jQuery(document).ready(function ($) {
     $(".mumu").click(function () {
         stat_click++;
         if (stat_click > 4) {
-            msgs = ["你有完没完呀？", "你已经摸我" + stat_click + "次了","专心工作哦", "非礼呀！救命！OH，My ladygaga","拖动我头上的消息窗体可以改变我的位置哦~","右键可以召唤隐藏功能哦!"];
+            msgs = ["你有完没完呀？", "你已经摸我" + stat_click + "次了","专心工作哦", "非礼呀！救命！OH，My ladygaga","拖动我头上的消息窗体可以改变我的位置哦~"/*,"右键可以召唤隐藏功能哦!"*/];
             var i = Math.floor(Math.random() * msgs.length);
             //showMessage(msgs[i]);
         } else {
-            msgs = ["筋斗云！~我飞！", "我跑呀跑呀跑！~~","拖动我头上的消息窗体可以改变我的位置哦~","右键可以召唤隐藏功能哦!", "专心工作哦", "干嘛动我呀！小心我咬你！"];
+            msgs = ["筋斗云！~我飞！", "我跑呀跑呀跑！~~","拖动我头上的消息窗体可以改变我的位置哦~"/*,"右键可以召唤隐藏功能哦!"*/, "专心工作哦", "干嘛动我呀！小心我咬你！"];
             var i = Math.floor(Math.random() * msgs.length);
             //showMessage(msgs[i]);
         }

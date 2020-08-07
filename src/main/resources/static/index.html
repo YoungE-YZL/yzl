@@ -6,8 +6,6 @@
     <meta charset="utf-8">
     <title>一个主页</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="fly,layui,前端社区">
-    <meta name="description" content="Fly社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
     <link rel="stylesheet" href="layui/css/layui.css">
     <link rel="stylesheet" href="layui/css/global.css">
     <link rel="stylesheet" href="css/spig.css">
@@ -17,18 +15,10 @@
 <div class="fly-header layui-bg-black">
     <div class="layui-container">
         <a class="fly-logo" href="/">
-            <!--<img src="../res/images/logo.png" alt="layui">-->
+
         </a>
         <ul class="layui-nav fly-nav layui-hide-xs">
-            <!--<li class="layui-nav-item layui-this">
-                <a href="/"><i class="iconfont icon-jiaoliu"></i>交流</a>
-            </li>
-            <li class="layui-nav-item">
-                <a href="case/case.html"><i class="iconfont icon-iconmingxinganli"></i>案例</a>
-            </li>
-            <li class="layui-nav-item">
-                <a href="http://www.layui.com/" target="_blank"><i class="iconfont icon-ui"></i>框架</a>
-            </li>-->
+
         </ul>
 
         <ul class="layui-nav fly-nav-user">
@@ -43,25 +33,6 @@
             <li class="layui-nav-item">
                 <a href="reg.html">注册</a>
             </li>
-
-            <!-- 登入后的状态 -->
-            <!--
-            <li class="layui-nav-item">
-              <a class="fly-nav-avatar" href="javascript:;">
-                <cite class="layui-hide-xs">贤心</cite>
-                <i class="iconfont icon-renzheng layui-hide-xs" title="认证信息：layui 作者"></i>
-                <i class="layui-badge fly-badge-vip layui-hide-xs">VIP3</i>
-                <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg">
-              </a>
-              <dl class="layui-nav-child">
-                <dd><a href="user/set.html"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
-                <dd><a href="user/message.html"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a></dd>
-                <dd><a href="user/home.html"><i class="layui-icon" style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>我的主页</a></dd>
-                <hr style="margin: 5px 0;">
-                <dd><a href="/user/logout/" style="text-align: center;">退出</a></dd>
-              </dl>
-            </li>
-            -->
         </ul>
     </div>
 </div>
@@ -69,15 +40,6 @@
 <div style="text-align: center;margin-top: 18%;font-size: 16px">
     主页目前就这样,最近一两个月忙于工作和学习应该不会变,反正除了我和阿里云也没人看<br>
 </div>
-
-<!--<div class="fly-footer">
-    <p><a href="http://fly.layui.com/" target="_blank">Fly社区</a> 2017 &copy; <a href="http://www.layui.com/" target="_blank">layui.com 出品</a></p>
-    <p>
-        <a href="http://fly.layui.com/jie/3147/" target="_blank">付费计划</a>
-        <a href="http://www.layui.com/template/fly/" target="_blank">获取Fly社区模版</a>
-        <a href="http://fly.layui.com/jie/2461/" target="_blank">微信公众号</a>
-    </p>
-</div>-->
 <div id="spig" class="spig" style="z-index: 9999">
     <div id="message">……</div>
     <div id="mumu" class="mumu"></div>
@@ -86,7 +48,19 @@
     © 20020-2021 <a href="laypc.cn">http://laypc.cn</a> 版权所有
     <a href="http://beian.miit.gov.cn">豫ICP备20022580号</a><br>
     声明/关于此站:仅供学习和娱乐,看看就好。若有侵权请联系405850873(QQ号)在线客(本)服(人)删除
+    <div style="width:300px;margin:0 auto; padding:20px 0;">
+        <a target="_blank"
+           href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41010402002598"
+           style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+            <img src="img/beian.png" style="float:left;"/>
+            <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">
+                豫公网安备 41010402002598号
+            </p>
+        </a>
+    </div>
 </div>
+
+
 <script type="text/javascript" src="./js/jquery.js"></script>
 <script src="layui/layui.js"></script>
 <script src="js/spig.js"></script>
@@ -105,12 +79,7 @@
         ,experience: 83
         ,sex: '男'
     };
-    layui.config({
-        version: "3.0.0"
-        ,base: '../res/mods/' //这里实际使用时，建议改成绝对路径
-    }).extend({
-        fly: 'index'
-    }).use('fly');
+    console.log("我是8080");
 </script>
 
 </body>

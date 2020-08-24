@@ -1,0 +1,31 @@
+
+package ${package.Entity};
+
+import java.math.BigDecimal;
+import java.util.Date;
+
+import com.baomidou.mybatisplus.annotation.TableField;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+/**
+ * 数据库表名 ${table.name}
+ *
+ * @author ${author}
+ * @date ${date}
+ */
+@Getter
+@Setter
+@ToString
+public class ${table.entityName}  {
+
+#foreach($field in ${table.fields})
+@TableField("${field.name}")
+@ApiModelProperty("${field.comment}")
+private ${field.propertyType}  ${field.propertyName};
+
+#end
+
+}

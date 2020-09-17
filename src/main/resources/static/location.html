@@ -44,8 +44,9 @@
         geolocation.getCurrentPosition(function (status, result) {
             console.log("result.position= "+result.position)
             if (status == 'complete') {
+                onComplete(result)
                 // 坐标转换
-                AMap.convertFrom(result.position, "gps", function (status, r) {
+               /* AMap.convertFrom(result.position, "gps", function (status, r) {
                     if (r.info === 'ok') {
                         result.position = r.locations[0];
                         alert(result.position);
@@ -54,7 +55,7 @@
                         console.log(r)
                         console.log(status)
                     }
-                });
+                });*/
             } else {
                 onError(result)
             }

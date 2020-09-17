@@ -32,9 +32,10 @@ public class MpGenerator {
         gc.setAuthor("YoungE");
 
         // 自定义文件命名，注意 %s 会自动填充表实体属性！
-        gc.setMapperName("%sDao");
+        gc.setMapperName("%sMapper");
         // gc.setXmlName("%sDao");
-        gc.setServiceName("%sService");
+        gc.setServiceName("I%sService");
+        gc.setServiceImplName("%sServiceImpl");
 //         gc.setServiceImplName("%sService");
         // gc.setControllerName("%sAction");
         mpg.setGlobalConfig(gc);
@@ -42,10 +43,10 @@ public class MpGenerator {
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
         dsc.setDbType(DbType.MYSQL);
-        dsc.setDriverName("com.mysql.jdbc.Driver");
+        dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
         dsc.setPassword("YoungE4058");
-        dsc.setUrl("jdbc:mysql://112.124.22.8:3306/myProject?useSSL=false");
+        dsc.setUrl("jdbc:mysql://112.124.22.8:3306/test?useSSL=false");
         mpg.setDataSource(dsc);
 
         // 策略配置
@@ -58,7 +59,7 @@ public class MpGenerator {
         PackageConfig pc = new PackageConfig();
         pc.setParent("cn.laypc.yzl");
         pc.setModuleName(null);
-        pc.setMapper("dao");
+        pc.setMapper("mapper");
         pc.setEntity("entity");
         pc.setService("service");
         pc.setServiceImpl("service.impl");

@@ -25,10 +25,12 @@ AMap.plugin('AMap.Geolocation', function () {
     map.addControl(geolocation);
     geolocation.getCurrentPosition(function (status, result) {
         if (status == 'complete') {
+
+            map.setZoomAndCenter(18,result.position);
+            map.setZoomAndCenter(20,result.position);
             add(result.position)
         } else {
-            console.log(result)
-            console.log(status)
+            add(result.info+","+result.message)
         }
     });
 });

@@ -4,15 +4,12 @@ import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * MybatisPlus分页查询配置
  * @time: 2020-01-08 15:10
  */
-@EnableTransactionManagement
 @Configuration
-@MapperScan("com.zzbsj.firstaid.service.*.mapper*")
 public class MybatisPlusConfig {
 
     /**

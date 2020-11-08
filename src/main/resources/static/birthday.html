@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        与生活斗争的
+        <span id="time"></span>
+    </div>
+</body>
+<script>
+    var birthday = new Date("2001-08-21");
+    setInterval(function () {
+        var now = (new Date().getTime() - birthday.getTime()) / (1000*60*60*24);
+        var str = now.toFixed(0) + "天" + new Date().getHours() + "小时" + new Date().getMinutes() + "分钟" + new Date().getSeconds() + "秒";
+        document.getElementById("time").innerHTML = str;
+    },1000)
+</script>
+</html>

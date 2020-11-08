@@ -36,6 +36,10 @@ public class InterceptorConfigurer implements WebMvcConfigurer {
 		patterns.add("/reg.html");
 		patterns.add("/index.html");
 		patterns.add("/location.html");
+
+		patterns.add("/login/**");
+		patterns.add("/");
+		patterns.add("/favicon.ico");
 		addInterceptor.addPathPatterns("/**").excludePathPatterns(patterns);
 	}
 }

@@ -44,15 +44,15 @@ jQuery(document).ready(function ($) {
     if (isindex) { //如果是主页
         var now = (new Date()).getHours();
         if (now > 0 && now <= 6) {
-            showMessage(visitor + '注意休息哦,我是小白 你是夜猫子呀？还不睡觉，明天起的来么你？', 6000);
+            showMessage(visitor + '注意休息哦,我是月挣零 你是夜猫子呀？还不睡觉，明天起的来么你？', 6000);
         } else if (now > 6 && now <= 11) {
-            showMessage(visitor + ' 我是小白, 早上好，早起的鸟儿有虫吃噢！早起的虫儿被鸟吃，你是鸟儿还是虫儿？嘻嘻！', 6000);
+            showMessage(visitor + ' 我是月挣零, 早上好，早起的鸟儿有虫吃噢！早起的虫儿被鸟吃，你是鸟儿还是虫儿？嘻嘻！', 6000);
         } else if (now > 11 && now <= 14) {
-            showMessage(visitor + ' 我是小白, 中午了，吃饭了么？不要饿着了', 6000);
+            showMessage(visitor + ' 我是月挣零, 中午了，吃饭了么？不要饿着了', 6000);
         } else if (now > 14 && now <= 18) {
-            showMessage(visitor + ' 我是小白, 中午的时光真难熬！还好有你在！', 6000);
+            showMessage(visitor + ' 我是月挣零, 中午的时光真难熬！还好有你在！', 6000);
         } else {
-            showMessage(visitor + ' 我是小白, 晚上好，快来逗我玩吧！', 6000);
+            showMessage(visitor + ' 我是月挣零, 晚上好，快来逗我玩吧！', 6000);
         }
     }
     else {

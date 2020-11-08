@@ -20,6 +20,7 @@ public class AuthorityInterceptor implements HandlerInterceptor {
 			throws Exception {
 		//获取Httpsession对象
 		String url = request.getRequestURL().toString();
+		System.err.println(url);
 		url = url.replace("//","");
 		url = url.substring(url.indexOf('/')+1);
 		HttpSession session = request.getSession();
